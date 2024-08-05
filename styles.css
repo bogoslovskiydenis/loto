@@ -331,24 +331,7 @@ header {
         line-height: 90px;
     }
 
-    .footer-content {
-        max-width: 1800px;
-        margin: 0 auto;
-    }
 
-    .footer-image {
-        width: 120px;
-    }
-
-    .footer-social-container {
-        max-width: 500px;
-        height: 150px;
-    }
-
-    .footer-logo {
-        max-width: 350px;
-        max-height: 42px;
-    }
 }
 @media (max-width: 1200px) {
     .modal-content {
