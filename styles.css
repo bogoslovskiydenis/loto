@@ -436,12 +436,11 @@ header {
 
     .modal-content {
         width: 95vw;
-        max-height: 50vh;
         padding: 5px;
     }
 
     .modal-content p {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .win-content-win {
