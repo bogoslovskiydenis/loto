@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Колесо Фортуны</title>
+</head>
+<body>
+<header>
+    <div class="logo-container">
+        <img src="assets/logo.png" alt="Логотип" class="logo">
+    </div>
+</header>
+
+<div class="container">
+    <div class="banner">
+        <div class="banner-text">Крути Колесо</div>
+    </div>
+    <div class="wheel-container" onclick="spinWheel()">
+        <img src="assets/wheel2.svg" id="wheel" class="wheel" alt="Колесо Фортуны">
+        <div class="wheel-overlay">
+            <img src="assets/B.png" alt="">
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-images">
+            <img src="assets/visa.png" alt="Image 1" class="footer-image">
+            <img src="assets/mastercard.png" alt="Image 2" class="footer-image">
+        </div>
+        <div class="footer-social-container">
+            <img src="assets/social-icon.png" alt="Footer Logo" class="footer-logo">
+        </div>
+    </div>
+</footer>
+
+<div class="modal" id="winnerModal">
+    <div class="win-content">
+        <p class="win-content-win">ТЫ ВЫИГРАЛ</p>
+    </div>
+    <div class="modal-content">
+        <p id="prizeText"></p>
+    </div>
+    <div class="btn">
+        <button onclick="showBonusModal()">Продолжить</button>
+    </div>
+</div>
+
+<div class="modal" id="bonusModal">
+    <div class="win-content2">
+        <p class="win-content-win2">ЗАБИРАЙ СВОЙ ПРИВЕТСТВЕННЫЙ БОНУС</p>
+    </div>
+    <div class="modal-content">
+        <p id="prizeTextBonus"></p>
+    </div>
+    <div class="btn">
+        <button onclick="redirectToGoogle()">Забрать бонус</button>
+    </div>
+</div>
+
+<script>
+    function spinWheel() {
+        const wheel = document.getElementById('wheel');
+        const wheelContainer = document.querySelector('.wheel-container');
+
+        wheelContainer.style.pointerEvents = 'none';
+
+        const rotations = 5 + Math.random() * 5;
+        const degrees = rotations * 360;
+
+        wheel.style.transform = `rotate(${degrees}deg)`;
+
+        setTimeout(() => {
+            const prizes = ['200 000KZT', '300FS', '50 000FS', '400KZT', '100 000KZT', '500FS', '150 000KZT', '200FS'];
+            const randomPrize = prizes[Math.floor(Math.random() * prizes.length)];
+
+            const modal = document.getElementById('winnerModal');
+            const prizeText = document.getElementById('prizeText');
+            prizeText.textContent = randomPrize;
+            modal.classList.add('show');
+
+            wheelContainer.style.pointerEvents = 'auto';
+        }, 5000);
+    }
+
+    function showBonusModal() {
+        const winnerModal = document.getElementById('winnerModal');
+        winnerModal.classList.remove('show');
+
+        const bonusModal = document.getElementById('bonusModal');
+        const prizeText = document.getElementById('prizeText').textContent;
+        const prizeTextBonus = document.getElementById('prizeTextBonus');
+        prizeTextBonus.textContent = prizeText;
+        bonusModal.classList.add('show');
+    }
+
+    function redirectToGoogle() {
+        window.location.href = 'https://www.google.com';
+    }
+</script>
+</body>
+</html>
