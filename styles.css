@@ -260,7 +260,96 @@ header {
     max-height: 33px;
     object-fit: contain;
 }
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
 
+    .banner {
+        width: 800px;
+        height: 80px;
+    }
+
+    .banner-text {
+        font-size: 60px;
+        line-height: 72px;
+    }
+
+    .logo-container {
+        width: 500px;
+        height: 150px;
+    }
+
+    .logo {
+        max-width: 350px;
+        max-height: 42px;
+    }
+
+    .wheel-container {
+        max-width: 800px;
+    }
+
+    .wheel-overlay {
+        max-width: 180px;
+    }
+
+    .modal-content {
+        width: 1000px;
+        height: 550px;
+    }
+
+    .modal-content p {
+        font-size: 90px;
+        line-height: 108px;
+    }
+
+    .win-content {
+        max-width: 600px;
+        height: 100px;
+    }
+
+    .win-content-win {
+        font-size: 48px;
+        line-height: 100px;
+    }
+
+    .win-content2 {
+        max-width: 1000px;
+        height: 150px;
+    }
+
+    .win-content-win2 {
+        font-size: 48px;
+        line-height: 100px;
+    }
+
+    .btn button {
+        max-width: 600px;
+        height: 90px;
+        font-size: 40px;
+        line-height: 90px;
+    }
+
+    .footer-content {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+
+    .footer-image {
+        width: 120px;
+    }
+
+    .footer-social-container {
+        max-width: 500px;
+        height: 150px;
+    }
+
+    .footer-logo {
+        max-width: 350px;
+        max-height: 42px;
+    }
+}
 @media (max-width: 1200px) {
     .modal-content {
         width: 80vw;
