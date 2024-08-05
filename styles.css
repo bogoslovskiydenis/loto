@@ -1,10 +1,6 @@
 @font-face {
     font-family: 'Druk Wide Cyr';
-    src: url('assets/fonts/Druk Wide Cyr Bold.otf') format('truetype'); /* Adjust the path to your font file */
-}
-
-header {
-    text-align: center;
+    src: url('assets/fonts/Druk Wide Cyr Bold.otf') format('truetype');
 }
 
 body {
@@ -20,9 +16,13 @@ body {
     background-attachment: fixed;
 }
 
+header {
+    text-align: center;
+}
+
 .banner-text {
-    width: 557px;
-    height: 60px;
+    width: 100%;
+    max-width: 557px;
     font-family: 'Druk Wide Cyr', Arial, sans-serif;
     font-weight: 500;
     font-size: 49.82px;
@@ -32,8 +32,8 @@ body {
 }
 
 .banner {
-    width: 629px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 629px;
     height: 66px;
     background-color: #E50914;
     display: flex;
@@ -43,10 +43,9 @@ body {
 }
 
 .logo-container {
-    width: 397px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 397px;
     height: 117px;
-    max-height: 100%;
     background-color: #000000;
     padding: 10px;
     border-radius: 0 0 140px 0;
@@ -65,45 +64,50 @@ body {
 }
 
 .container {
-    width: 1920px;
-    max-width: 100%;
-    height: 100vh;
-    margin: 0 auto;
+    flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .wheel-container {
     position: relative;
-    width: 650px;
-    height: 730px;
+    width: 100%;
+    max-width: 650px;
+    aspect-ratio: 1 / 1;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wheel {
+    width: 100%;
+    height: auto;
+    transition: transform 5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .wheel-overlay {
     position: absolute;
-    bottom: 0px;
+    bottom: -70px;
     left: 50%;
     transform: translateX(-50%);
-    width: 150px;
-    max-width: 100%;
-    height: 150px;
-    max-height: 100%;
-    border-radius: 50%;
+    width: 23%;
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bold;
-    font-size: 24px;
     z-index: 20;
 }
 
 .wheel-overlay img {
-    width: 150px;
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .wheel {
@@ -119,7 +123,6 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -134,7 +137,8 @@ body {
 }
 
 .modal-content {
-    width: 840px;
+    width: 100%;
+    max-width: 840px;
     height: 467px;
     background-color: #000000;
     padding: 20px;
@@ -155,9 +159,9 @@ body {
 }
 
 .win-content {
-    width: 452px;
+    width: 100%;
+    max-width: 452px;
     height: 82px;
-    max-width: 100%;
     background-color: #000000;
     padding: 20px;
     border-radius: 10px;
@@ -166,7 +170,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .win-content-win {
@@ -176,13 +179,9 @@ body {
     line-height: 90px;
 }
 
-.modal-content h2 {
-    margin: 0 0 20px 0;
-}
-
 .win-content2 {
-    width: 840px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 840px;
     height: 127px;
     background-color: #000000;
     padding: 20px;
@@ -192,7 +191,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .win-content-win2 {
@@ -203,17 +201,13 @@ body {
 }
 
 .btn button {
-    width: 452px;
+    width: 100%;
+    max-width: 452px;
     height: 74px;
-
     border: none;
     border-radius: 5px;
     background-color: #E50914;
-
     cursor: pointer;
-}
-
-.btn button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,45 +223,34 @@ body {
     opacity: 1;
 }
 
-.footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
 .footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding-left: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .footer-images {
-    width: 41px;
-    height: 15px;
     display: flex;
 }
 
 .footer-image {
-    width: 100px;
     height: auto;
     margin-right: 10px;
+    padding-left: 20px;
 }
 
 .footer-social-container {
-    width: 397px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 397px;
     height: 117px;
-    max-height: 100%;
     background-color: #000000;
     border-radius: 140px 0 0 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 .footer-logo {
@@ -279,9 +262,6 @@ body {
 }
 
 @media (max-width: 1200px) {
-    /*.container {*/
-    /*    height: 90vh;*/
-    /*}*/
     .modal-content {
         width: 80vw;
         max-height: 70vh;
@@ -312,6 +292,7 @@ body {
     .modal-content p {
         font-size: 50px;
     }
+
 }
 
 @media (max-width: 768px) {
@@ -326,19 +307,12 @@ body {
     }
 
     .wheel-container {
-        width: 90vw;
-        height: 90vw;
+        max-width: 90vw;
     }
 
     .wheel-overlay {
-        bottom: -25px;
-        width: 70px;
-        height: 70px;
-    }
-
-    .wheel-overlay img {
-        width: 70px;
-        height: 70px;
+        width: 15%;
+        max-width: 70px;
     }
 
     .footer-social-container {
@@ -365,22 +339,23 @@ body {
     .modal-content p {
         font-size: 40px;
     }
+    .wheel-overlay img{
+        position: absolute;
+        bottom: 50px;
+    }
+    .banner-text {
+        font-size: 30px;
+    }
 }
 
 @media (max-width: 480px) {
     .wheel-container {
-        width: 100vw;
-        height: 100vw;
+        max-width: 100vw;
     }
 
     .wheel-overlay {
-        width: 50px;
-        height: 50px;
-    }
-
-    .wheel-overlay img {
-        width: 50px;
-        height: 50px;
+        width: 12%;
+        max-width: 50px;
     }
 
     .footer-social-container {
@@ -408,5 +383,40 @@ body {
     .btn button {
         font-size: 24px;
         line-height: 60px;
+    }
+    .banner-text {
+        font-size: 30px;
+    }
+    .wheel-overlay img{
+        position: absolute;
+        bottom: 75px;
+    }
+}
+
+@media (max-width: 390px){
+    .modal-content p {
+        font-size: 30px;
+    }
+
+    .win-content-win {
+        font-size: 15px;
+    }
+    .win-content-win2{
+        font-size: 10px;
+    }
+
+    .btn button {
+        font-size: 24px;
+        line-height: 60px;
+    }
+    .banner {
+        max-width: 100%;
+    }
+    .banner-text {
+        font-size: 30px;
+    }
+    .wheel-overlay img{
+        position: absolute;
+        bottom: 75px;
     }
 }
