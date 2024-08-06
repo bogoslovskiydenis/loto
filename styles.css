@@ -82,6 +82,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 }
 
 .wheel {
@@ -92,7 +93,7 @@ header {
 
 .wheel-overlay {
     position: absolute;
-    bottom: -75px; /* Располагаем overlay ниже колеса */
+    bottom: -10%;
     left: 50%;
     transform: translateX(-50%);
     width: 23%;
@@ -134,14 +135,15 @@ header {
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
     flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .modal-content {
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin: 20px 0;
     width: 100%;
     max-width: 840px;
-    height: 200px;
+    min-height: 200px;
     background-color: #000000;
     padding: 20px;
     border-radius: 10px;
@@ -150,6 +152,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .modal-content p {
@@ -159,11 +162,10 @@ header {
     font-size: 74px;
     line-height: 90px;
 }
-
-.win-content {
+.win-content, .win-content2 {
     width: 100%;
-    max-width: 452px;
-    height: 82px;
+    max-width: 840px;
+    min-height: 82px;
     background-color: #000000;
     padding: 20px;
     border-radius: 10px;
@@ -172,6 +174,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 .win-content-win {
@@ -181,19 +184,6 @@ header {
     line-height: 90px;
 }
 
-.win-content2 {
-    width: 100%;
-    max-width: 840px;
-    height: 127px;
-    background-color: #000000;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .win-content-win2 {
     font-family: 'Druk Wide Cyr', Arial, sans-serif;
@@ -396,6 +386,7 @@ header {
     }
 
     .wheel-overlay {
+        bottom: -15%;
         width: 20%;
     }
     .banner-text {
@@ -413,16 +404,9 @@ header {
 }
 
 @media (max-width: 480px) {
-    .wheel-container {
-        max-width: 100vw;
-    }
-
     .wheel-overlay img{
         position: absolute;
         bottom: 50px;
-    }
-    .wheel-overlay {
-        width: 20%;
     }
     .footer-social-container {
         height: 50px;
@@ -447,7 +431,12 @@ header {
         font-size: 30px;
     }
     .wheel-container {
-        margin-bottom: 50px;
+        max-width: 100%;
+    }
+
+    .wheel-overlay {
+        bottom: -20%;
+        width: 18%;
     }
 
 }
