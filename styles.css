@@ -139,7 +139,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("assets/bg-modal.svg");
+    background-image: url("assets/modalbg.png");
     background-size: cover;
     background-position: center;
     z-index: 30;
@@ -149,7 +149,7 @@ header {
     flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.7%); /* Полностью непрозрачный фон */
+    /*background-color: rgba(0, 0, 0, 1); !* Полностью непрозрачный фон *!*/
 }
 
 .modal-content {
